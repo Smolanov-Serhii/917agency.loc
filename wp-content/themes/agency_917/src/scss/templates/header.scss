@@ -1,0 +1,177 @@
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 48px 0;
+    box-shadow: 0px 4px 20px rgba(169, 190, 202, 0);
+    transition: 0.3s ease-in-out;
+    z-index: 50;
+    height: auto;
+    background-color: #FFFFFF;
+    @media all and (max-width: 1920px){
+        padding: px(48) 0;
+    }
+    @media all and (max-width: 1024px){
+        padding: px(16) 0;
+    }
+    &__container{
+        display: flex;
+        align-items: center;
+        @media all and (max-width: 1024px){
+            justify-content: space-between;
+        }
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex: 1;
+        transition: $transition;
+        @media all and (max-width: 1024px){
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            right: 0;
+            transform: translateX(200%);
+            width: px(440);
+            background-color: #FFFFFF;
+            height: 100vh;
+            z-index: 100;
+            padding-bottom: 5vh;
+        }
+        @media all and (max-width: 500px){
+            width: 100%;
+        }
+        &.active{
+            @media all and (max-width: 1024px){
+                display: flex;
+                transform: translateX(0);
+            }
+        }
+    }
+    &__logo{
+        width: 105px;
+        margin-right: 40px;
+        @media all and (max-width: 1920px){
+            width: px(105);
+            margin-right: px(40);
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__burger{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 100;
+        height: auto;
+        @media all and (max-width: 1024px){
+            display: flex;
+        }
+        svg{
+            display: none;
+        }
+        &.active{
+            span{
+                display: none;
+            }
+            svg{
+                display: block;
+            }
+        }
+        span{
+            display: block;
+            height: 2px;
+            background-color: #000000;
+            margin: 10px 0;
+            width: 60px;
+            @media all and (max-width: 1920px){
+                margin: px(10) 0;
+                width: px(60);
+            }
+            @media all and (max-width: 1024px){
+                width: px(40);
+                margin: px(6) 0;
+            }
+            @media all and (max-width: 500px){
+                width: px(30);
+                margin: px(4) 0;
+            }
+        }
+    }
+    &__nav{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+        @media all and (max-width: 1024px){
+            position: relative;
+            width: 100%;
+        }
+        &-close{
+            display: none;
+            position: absolute;
+            top: px(20);
+            right: px(20);
+            width: px(40);
+            height: px(40);
+            @media all and (max-width: 1024px){
+                display: block;
+            }
+            svg{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .menu{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media all and (max-width: 1024px){
+                flex-direction: column;
+            }
+            li{
+                margin: 0 0 0 66px;
+                @media all and (max-width: 1920px){
+                    margin: 0 0 0 px(66);
+                }
+                @media all and (max-width: 1440px){
+                    margin: 0 0 0 px(40);
+                }
+                @media all and (max-width: 1024px){
+                    margin: px(20) 0;
+                }
+                &.current_page_item{
+                    a{
+                        text-decoration: underline;
+                    }
+                }
+                a{
+                    color: #000125;
+                    font-variant-numeric: lining-nums proportional-nums;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 100%;
+                    letter-spacing: normal;
+                    text-decoration: none;
+                    @media all and (max-width: 1920px){
+                        font-size: px(24);
+                    }
+                    @media all and (max-width: 1440px){
+                        font-size: px(20);
+                    }
+                    @media all and (max-width: 1024px){
+                        font-size: px(26);
+                    }
+                }
+            }
+        }
+    }
+}

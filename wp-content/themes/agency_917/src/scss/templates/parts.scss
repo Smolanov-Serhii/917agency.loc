@@ -1,0 +1,116 @@
+.parts{
+  &__container{
+    @media all and (max-width: 1024px){
+      background-color: #F5F5F5;
+    }
+  }
+  &__wrapper{
+    background-color: #F5F5F5;
+    padding: 138px 0;
+    @media all and (max-width: 1920px){
+      padding: px(138) 0;
+    }
+    @media all and (max-width: 1024px){
+      background-color: transparent;
+      padding: px(80) 0;
+    }
+    @media all and (max-width: 768px){
+      padding: px(40) 0;
+    }
+    @media all and (max-width: 500px){
+      padding: px(24) 0;
+    }
+  }
+  &__head{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 83px;
+    @media all and (max-width: 1920px){
+      margin-bottom: px(83);
+    }
+    @media all and (max-width: 1024px){
+      display: none;
+    }
+    &-item, span{
+      color: #000;
+      font-size: 42px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: uppercase;
+      @media all and (max-width: 1920px){
+        font-size: px(42);
+      }
+      @media all and (max-width: 1024px){
+        font-size: px(32);
+      }
+      @media all and (max-width: 768px){
+        font-size: px(24);
+      }
+    }
+    span{
+      margin: 0 20px;
+      @media all and (max-width: 1920px){
+        margin: 0 px(20);
+      }
+      &:last-child{
+        display: none;
+      }
+    }
+  }
+  &__content{
+    display: flex;
+    justify-content: center;
+    @media all and (max-width: 1024px){
+      flex-wrap: wrap;
+    }
+    &-item{
+      width: 514px;
+      margin: 0 24px;
+      @media all and (max-width: 1920px){
+        margin: 0 px(24);
+        width: px(514);
+      }
+      @media all and (max-width: 1024px){
+        width: 100%;
+        margin: 0;
+        margin-bottom: px(40);
+      }
+      @media all and (max-width: 768px){
+        margin-bottom: px(24);
+      }
+      &-title{
+        display: block;
+        font-size: 32px;
+        margin-bottom: 24px;
+        text-transform: uppercase;
+        font-weight: 500;
+        @media all and (max-width: 1920px){
+          font-size: px(32);
+          margin-bottom: px(24);
+        }
+        @media all and (max-width: 500px){
+          font-size: px(22);
+          margin-bottom: px(14);
+        }
+      }
+      p{
+        color: #000;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 0;
+        @media all and (max-width: 1920px){
+          font-size: px(24);
+        }
+        @media all and (max-width: 500px){
+          font-size: px(14);
+        }
+        strong{
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

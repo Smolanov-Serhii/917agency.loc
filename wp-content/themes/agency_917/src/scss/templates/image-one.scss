@@ -1,0 +1,11 @@
+.image-one{
+  &__container{
+    @media all and (max-width: 1024px){
+      padding: 0;
+    }
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}
