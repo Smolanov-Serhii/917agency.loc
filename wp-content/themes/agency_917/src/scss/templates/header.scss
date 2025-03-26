@@ -147,20 +147,21 @@
                 @media all and (max-width: 1024px){
                     margin: px(20) 0;
                 }
-                &.current_page_item{
+                &.current_page_item, &:hover{
                     a{
                         text-decoration: underline;
                     }
                 }
                 a{
                     color: #000125;
-                    font-variant-numeric: lining-nums proportional-nums;
                     font-size: 24px;
                     font-style: normal;
                     font-weight: 400;
                     line-height: 100%;
                     letter-spacing: normal;
                     text-decoration: none;
+                    transition: $transition;
+                    font-family: "HelveticaNeueLight", Arial, sans-serif;
                     @media all and (max-width: 1920px){
                         font-size: px(24);
                     }
