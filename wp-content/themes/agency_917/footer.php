@@ -11,24 +11,23 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'agency' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'agency' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'agency' ), 'agency', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
-
+	<footer class="footer">
+		<div class="footer__container main-container">
+			<div class="footer__left section-title" data-aos="fade-up" data-aos-delay="100">
+                <strong>Let`s talk</strong><br>with us
+            </div>
+            <div class="footer__main">
+                <a href="tel:+19176248075" data-aos="fade-up" data-aos-delay="300">+1 917 624 8075</a>
+                <a href="mailto:INFO@917AGENCY.COM" data-aos="fade-up" data-aos-delay="500">INFO@917AGENCY.COM</a>
+                <div class="footer__btn button button-black" data-aos="fade-up" data-aos-delay="700">
+                    <span>Сontact</span>
+                </div>
+            </div>
+		</div>
+	</footer>
+</div>
 <?php wp_footer(); ?>
-
 </body>
 </html>
+
+

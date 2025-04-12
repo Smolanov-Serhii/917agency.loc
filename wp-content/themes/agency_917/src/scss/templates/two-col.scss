@@ -1,0 +1,30 @@
+.two-col{
+  margin-bottom: 50px;
+  @media all and (max-width: 1920px){
+    margin-bottom: px(50);
+  }
+  &__title{
+    margin-bottom: 32px;
+    @media all and (max-width: 1920px){
+      margin-bottom: px(32);
+    }
+  }
+  &__desc{
+    column-count: 2;
+    column-gap: 40px;
+    @media all and (max-width: 1920px){
+      column-gap: px(50);
+    }
+    p, span{
+      font-family: "HelveticaNeueLight", sans-serif;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 120%;
+      color: #000000;
+      margin-bottom: 0;
+      @media all and (max-width: 1920px){
+        font-size: px(24);
+      }
+    }
+  }
+}

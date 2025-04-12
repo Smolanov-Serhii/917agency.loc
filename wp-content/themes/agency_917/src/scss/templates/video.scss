@@ -1,0 +1,19 @@
+.video{
+  margin-bottom: 82px;
+  @media all and (max-width: 1920px){
+    margin-bottom: px(82);
+  }
+  &__container{
+    min-height: 454px;
+    @media all and (max-width: 1920px){
+      min-height: px(454);
+    }
+    img{
+      width: 100%;
+      height: auto;
+    }
+    video{
+
+    }
+  }
+}
