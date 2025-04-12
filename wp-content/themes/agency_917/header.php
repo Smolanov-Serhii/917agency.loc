@@ -21,11 +21,6 @@ $post_id = get_the_ID();
                 the_custom_logo();
             ?>
         </div>
-        <div class="header__burger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
         <div class="header__wrapper">
             <nav class="header__nav">
                 <div class="header__nav-close">

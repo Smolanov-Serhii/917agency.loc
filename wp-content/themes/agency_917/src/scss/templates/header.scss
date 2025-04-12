@@ -121,6 +121,7 @@
             right: px(20);
             width: px(40);
             height: px(40);
+            cursor: pointer;
             @media all and (max-width: 1024px){
                 display: block;
             }
@@ -129,47 +130,54 @@
                 height: 100%;
             }
         }
-        .menu{
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .menu-main-menu-container{
             @media all and (max-width: 1024px){
-                flex-direction: column;
+                width: 100%;
             }
-            li{
-                margin: 0 0 0 66px;
-                @media all and (max-width: 1920px){
-                    margin: 0 0 0 px(66);
-                }
-                @media all and (max-width: 1440px){
-                    margin: 0 0 0 px(40);
-                }
+            ul{
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 @media all and (max-width: 1024px){
-                    margin: px(20) 0;
+                    flex-direction: column;
+                    width: 100%;
+                    text-align: center;
                 }
-                &.current_page_item, &:hover{
-                    a{
-                        text-decoration: underline;
-                    }
-                }
-                a{
-                    color: #000125;
-                    font-size: 24px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 100%;
-                    letter-spacing: normal;
-                    text-decoration: none;
-                    transition: $transition;
-                    font-family: "HelveticaNeueLight", Arial, sans-serif;
+                li{
+                    margin: 0 0 0 66px;
                     @media all and (max-width: 1920px){
-                        font-size: px(24);
+                        margin: 0 0 0 px(66);
                     }
                     @media all and (max-width: 1440px){
-                        font-size: px(20);
+                        margin: 0 0 0 px(40);
                     }
                     @media all and (max-width: 1024px){
-                        font-size: px(26);
+                        margin: px(20) 0;
+                    }
+                    &.current_page_item, &:hover{
+                        a{
+                            text-decoration: underline;
+                        }
+                    }
+                    a{
+                        color: #000125;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 100%;
+                        letter-spacing: normal;
+                        text-decoration: none;
+                        transition: $transition;
+                        font-family: "HelveticaNeueLight", Arial, sans-serif;
+                        @media all and (max-width: 1920px){
+                            font-size: px(24);
+                        }
+                        @media all and (max-width: 1440px){
+                            font-size: px(20);
+                        }
+                        @media all and (max-width: 1024px){
+                            font-size: px(26);
+                        }
                     }
                 }
             }
