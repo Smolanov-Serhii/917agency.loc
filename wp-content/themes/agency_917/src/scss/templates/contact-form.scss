@@ -1,0 +1,90 @@
+.contact-form{
+  margin-top: 108px;
+  padding-bottom: 63px;
+  @media all and (max-width: 1920px){
+    margin-top: px(108);
+    padding-bottom: px(63);
+  }
+  &__container{
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+    @media all and (max-width: 1920px){
+      gap: px(60);
+    }
+  }
+  &__img{
+    width: 40%;
+  }
+  &__title{
+    margin-bottom: 40px;
+    line-height: 100%;
+    @media all and (max-width: 1920px){
+      margin-bottom: px(40);
+    }
+  }
+  &__form{
+    width: calc(60% - 60px);
+    @media all and (max-width: 1920px){
+      width: calc(60% - px(60));
+    }
+    label{
+      font-family: "HelveticaNeueLight", sans-serif;
+      font-size: 24px;
+      text-transform: uppercase;
+      @media all and (max-width: 1920px){
+        font-size: px(24);
+      }
+      > span{
+        display: inline-block;
+      }
+      span{
+        color: #D8D8D8;
+        text-transform: lowercase;
+      }
+    }
+    input, textarea{
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #A6A6A6;
+      font-size: 24px;
+      padding: 10px 0;
+      @media all and (max-width: 1920px){
+        font-size: px(24);
+        padding: px(10) 0;
+      }
+    }
+    textarea{
+      height: 103px;
+      resize: none;
+      @media all and (max-width: 1920px){
+        height: px(103);
+      }
+    };
+  }
+  .row-full{
+    label{
+      width: 100%;
+      > span, textarea{
+        width: 100%;
+      }
+    }
+  }
+  .row{
+    margin-bottom: 48px;
+    @media all and (max-width: 1920px){
+      margin-bottom: px(48);
+    }
+    p{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0;
+      label{
+        width: calc(50% - 24px);
+        @media all and (max-width: 1920px){
+          width: calc(50% - px(24));
+        }
+      }
+    }
+  }
+}

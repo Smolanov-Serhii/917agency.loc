@@ -114,18 +114,51 @@ img{
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   @media all and (max-width: 1920px){
     padding: px(20) px(60);
   }
   &-black{
     background-color: #000000;
+    border: 1px solid #000000;
+    transition: 0.3s ease-in-out;
     span{
       color: #FFFFFF;
     }
+    &:hover{
+      background-color: #FFFFFF;
+      color: #000000;
+      span{
+        color: #000000;
+      }
+    }
+  }
+  &-white{
+    background-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    transition: 0.3s ease-in-out;
+    span{
+      color: #000000;
+    }
+    &:hover{
+      background-color: #000000;
+      span{
+        color: #FFFFFF;
+      }
+    }
+  }
+  color: #FFFFFF;
+  border: 1px solid #000000;
+  font-family: "HelveticaNeueRoman", sans-serif;
+  font-size: 24px;
+  transition: 0.3s ease-in-out!important;
+  @media all and (max-width: 1920px){
+    font-size: px(24);
   }
   span{
     font-family: "HelveticaNeueRoman", sans-serif;
     font-size: 24px;
+    transition: 0.3s ease-in-out;
     @media all and (max-width: 1920px){
       font-size: px(24);
     }
@@ -133,22 +166,22 @@ img{
 }
 .wpcf7-form{
   input:focus {
-    border: 1px solid #C4B39B;
+    //border: 1px solid #C4B39B;
   }
   label{
     position: relative;
   }
   .wpcf7-not-valid{
-    border: 1px solid #E20000;
+    border-bottom: 1px solid #E20000;
   }
   .wpcf7-not-valid-tip{
     position: absolute;
     background-color: #E20000;
     color: white;
     border-radius: 20px;
-    bottom: -8px;
+    bottom: -12px;
     top: auto!important;
-    left: 48px;
+    left: 12px;
     height: 22px;
     display: inline-flex;
     align-items: center;
@@ -157,8 +190,8 @@ img{
     font-size: 14px;
     width: auto;
     @media all and (max-width: 1920px){
-      bottom: px(-8);
-      left: px(48);
+      bottom: px(-12);
+      left: px(12);
       height: px(22);
       padding: 0 px(20);
       font-size: px(14);
@@ -242,5 +275,12 @@ p{
 @import "templates/productions";
 @import "templates/two-col";
 @import "templates/video";
+@import "templates/about-img";
+@import "templates/cbanner";
+@import "templates/cases";
+@import "templates/contact-form";
+@import "templates/sbanner";
+@import "templates/full";
+@import "templates/tvideo";
 @import "templates/footer";
 

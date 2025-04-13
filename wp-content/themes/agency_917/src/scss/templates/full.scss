@@ -1,0 +1,104 @@
+.full{
+  margin: 82px 0;
+  @media all and (max-width: 1920px){
+    margin: px(82) 0;
+  }
+  &__container{
+
+  }
+  &__title{
+    margin-bottom: 60px;
+    @media all and (max-width: 1920px){
+      margin-bottom: px(60);
+    }
+  }
+  &__text{
+    h2{
+      font-size: 32px;
+      font-family: "HelveticaNeueBoldItalic", sans-serif;
+      margin-bottom: 0.8em;
+      color: #000000;
+      text-transform: uppercase;
+      @media all and (max-width: 1920px){
+        font-size: px(32);
+      }
+    }
+    p, li{
+      text-transform: uppercase;
+      font-size: 24px;
+      font-family: "HelveticaNeueLight", sans-serif;
+      line-height: 120%;
+      @media all and (max-width: 1920px){
+        font-size: px(24);
+      }
+      strong{
+        font-family: "HelveticaNeueBoldItalic", sans-serif;
+      }
+    }
+    ul{
+      padding-left: 40px;
+      margin-bottom: 40px;
+      @media all and (max-width: 1920px){
+        padding-left: px(40);
+        margin-bottom: px(40);
+      }
+      li{
+        list-style: disc;
+      }
+    }
+  }
+
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    &:nth-child(1){
+      margin-bottom: 30px;
+      @media all and (max-width: 1920px){
+        margin-bottom: px(30);
+      }
+      .full{
+        &__text{
+          width: calc(30% - 15px);
+          @media all and (max-width: 1920px){
+            width: calc(30% - px(15));
+          }
+        }
+        &__image{
+          width: calc(70% - 15px);
+          @media all and (max-width: 1920px){
+            width: calc(70% - px(15));
+          }
+        }
+      }
+    }
+    &:nth-child(2){
+      .full{
+        &__text{
+          width: calc(40% - 10px);
+          @media all and (max-width: 1920px){
+            width: calc(40% - px(10));
+          }
+        }
+        &__image{
+          width: calc(60% - 10px);
+          display: flex;
+          justify-content: space-between;
+          @media all and (max-width: 1920px){
+            width: calc(60% - px(10));
+          }
+        }
+        &__img{
+          width: calc(50% - 15px);
+          @media all and (max-width: 1920px){
+            width: calc(50% - px(15));
+          }
+          img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

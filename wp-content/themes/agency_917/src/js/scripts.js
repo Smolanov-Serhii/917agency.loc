@@ -123,5 +123,19 @@ $(document).ready(function () {
     }
     TabsElements();
 
+    function FaqClick(){
+        if($('.cases').length){
+            $(".cases__item-title").click(function() {
+                if ($(this).closest('.cases__item').hasClass('active')){
+                    $(this).closest('.cases__item').removeClass("active");
+                } else {
+                    $(this).closest('.cases').find('.cases__item').removeClass("active");
+                    $(this).closest('.cases__item').addClass("active");
+                }
+            });
+        }
+    }
+    FaqClick();
+
 });
 

@@ -2,7 +2,7 @@
 $post_id = get_the_ID();
 ?>
 <section class="video">
-    <div class="video__container main-container" data-aos="fade-up" data-aos-delay="100">
+    <div class="video__container <?php if($post_id != 13){ echo 'main-container'; }?>" data-aos="fade-up" data-aos-delay="100">
 
         <?php
         if (get_field('title_video_block', $post_id)) {

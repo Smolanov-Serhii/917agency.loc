@@ -1,7 +1,7 @@
 .two-lines{
-  padding: 108px 0;
+  padding: 108px 0 43px 0;
   @media all and (max-width: 1920px){
-    padding: px(108) 0;
+    padding: px(108) 0 px(43) 0;
   }
   &__desc{
     font-family: "HelveticaNeueLight", sans-serif;

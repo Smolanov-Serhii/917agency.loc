@@ -1,0 +1,50 @@
+.sbanner{
+  &__container{
+    position: relative;
+  }
+  &__logo{
+    margin-bottom: -74px;
+    @media all and (max-width: 1920px){
+      margin-bottom: px(-74);
+    }
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__line{
+    position: absolute;
+    bottom: 58px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media all and (max-width: 1920px){
+      bottom: px(58);
+    }
+  }
+  &__left, &__center{
+    font-family: "HelveticaNeueLight", sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 120%;
+    color: #FFFFFF;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    max-width: 584px;
+    @media all and (max-width: 1920px){
+      font-size: px(24);
+      max-width: px(584);
+    }
+  }
+  &__btn{
+    min-width: 388px;
+    @media all and (max-width: 1920px){
+      min-width: px(388);
+    }
+    span{
+      text-transform: uppercase;
+    }
+  }
+}

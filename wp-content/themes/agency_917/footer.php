@@ -10,7 +10,12 @@
  */
 
 ?>
+<?php
+$post_id = get_the_ID();
+if ($post_id != 17){
 
+
+?>
 	<footer class="footer">
 		<div class="footer__container main-container">
 			<div class="footer__left section-title" data-aos="fade-up" data-aos-delay="100">
@@ -26,7 +31,9 @@
 		</div>
 	</footer>
 </div>
-<?php wp_footer(); ?>
+<?php
+}
+wp_footer(); ?>
 </body>
 </html>
 
