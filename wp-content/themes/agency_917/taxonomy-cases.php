@@ -39,11 +39,25 @@ get_header();
                     $counter = 1;
                     if ( $query->have_posts() ) {
                         while ( $query->have_posts() ) {
-                            $query->the_post();?>
+                            $query->the_post();
+                            $postpers_id = get_the_ID();
+                            ?>
                             <div class="interest__item" data-aos="fade-up" data-aos-delay="<?php echo $counter * 150; ?>">
                                 <div class="interest__item-main">
-                                    <div class="interest__item-img <?php if (get_field('video_fiile')) { echo 'video-item';} else { echo 'image-item'; }?>">
+                                    <div class="interest__item-img <?php if (get_field('video_fiile', $postpers_id)){ echo 'has-video';}?>" <?php if (get_field('video_fiile', $postpers_id)){ echo 'data-video="' . get_field('video_fiile', $postpers_id) . '"';}?>>
                                         <img src="<?php echo get_field('image_for_page')?>">
+                                        <?php
+                                        if (get_field('video_fiile', $postpers_id)){
+                                            ?>
+                                            <div class="interest__gallery-play">
+                                                <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="27.5" cy="27.5" r="27" stroke="white"/>
+                                                    <path d="M36 27.5L23.25 34.8612L23.25 20.1388L36 27.5Z" fill="white"/>
+                                                </svg>
+                                            </div>
+                                            <?php
+                                        }
+                                        ?>
                                     </div>
                                     <div class="interest__item-content">
                                         <div class="interest__item-title section-title">
@@ -53,7 +67,7 @@ get_header();
                                             <?php echo get_field('description_for_page')?>
                                         </div>
                                         <?php
-                                        if( have_rows('portfolio_list' , $post_id )):
+                                        if( have_rows('portfolio_list' , $postpers_id )):
                                             ?>
                                             <div class="interest__item-btn pbanner__btn button button-white">
                                                 <span>Detailes</span>
@@ -69,8 +83,8 @@ get_header();
                                 <div class="interest__gallery swiper-container" style="display: none">
                                     <div class="interest__gallery-list swiper-wrapper">
                                         <?php
-                                        if( have_rows('portfolio_list' , $post_id )):
-                                            while( have_rows('portfolio_list' , $post_id ) ) : the_row();
+                                        if( have_rows('portfolio_list' , $postpers_id )):
+                                            while( have_rows('portfolio_list' , $postpers_id ) ) : the_row();
                                                 $img = get_sub_field('image_for_item');
                                                 $video = get_sub_field('video_for_item');
                                                 if ($video){

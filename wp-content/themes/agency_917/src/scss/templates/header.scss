@@ -157,7 +157,7 @@
                     @media all and (max-width: 1024px){
                         margin: px(20) 0;
                     }
-                    &.current_page_item, &:hover{
+                    &.current_page_item, &.current-menu-item, &:hover{
                         a{
                             text-decoration: underline;
                         }

@@ -11,7 +11,9 @@ $post_id = get_the_ID();
                 $title = get_sub_field('title');
                 $content = get_sub_field('content');
                 $image1 = get_sub_field('image_1');
+                $video1 = get_sub_field('video_1');
                 $image2 = get_sub_field('image_2');
+                $video2 = get_sub_field('video_2');
                 ?>
                 <div class="cases__item"  data-aos="fade-right" data-aos-delay="100">
                     <div class="cases__item-top"></div>
@@ -26,14 +28,38 @@ $post_id = get_the_ID();
                             </div>
                         </div>
                         <div class="cases__item-images">
-                            <div class="cases__item-image">
+                            <div class="cases__item-image <?php if ($video1){ echo 'has-video';}?>" <?php if ($video1){ echo 'data-video="' . $video1 . '"';}?>>
                                 <img src="<?php echo $image1;?>" alt="<?php echo $title;?>">
+                                <?php
+                                if ($video1){
+                                    ?>
+                                        <div class="interest__gallery-play">
+                                            <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="27.5" cy="27.5" r="27" stroke="white"/>
+                                                <path d="M36 27.5L23.25 34.8612L23.25 20.1388L36 27.5Z" fill="white"/>
+                                            </svg>
+                                        </div>
+                                    <?php
+                                }
+                                ?>
                             </div>
                             <?php
                                 if ($image2) {
                                     ?>
-                                        <div class="cases__item-image">
+                                        <div class="cases__item-image <?php if ($video1){ echo 'has-video';}?>" <?php if ($video1){ echo 'data-video="' . $video2 . '"';}?>>
                                             <img src="<?php echo $image2;?>" alt="<?php echo $title;?>">
+                                            <?php
+                                            if ($video2){
+                                                ?>
+                                                <div class="interest__gallery-play">
+                                                    <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <circle cx="27.5" cy="27.5" r="27" stroke="white"/>
+                                                        <path d="M36 27.5L23.25 34.8612L23.25 20.1388L36 27.5Z" fill="white"/>
+                                                    </svg>
+                                                </div>
+                                                <?php
+                                            }
+                                            ?>
                                         </div>
                                     <?php
                                 }
