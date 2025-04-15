@@ -137,5 +137,93 @@ $(document).ready(function () {
     }
     FaqClick();
 
+    function ProductSlider() {
+        var TeamSlider = new Swiper(".productions .swiper-container", {
+            slidesPerView: 4.5,
+            spaceBetween: 14,
+            loop: true,
+            breakpoints: {
+                '320': {
+                    slidesPerView: 1.3,
+                },
+                '500': {
+                    slidesPerView: 1.5,
+                },
+                '768': {
+                    slidesPerView: 2.5,
+                },
+                '1024': {
+                    slidesPerView: 3.5,
+                },
+            },
+        });
+    }
+
+    if ($('.productions').length) {
+        ProductSlider();
+    }
+
+    function PopupInit(){
+        $(".js-popup").click(function () {
+            $('body').addClass('locked');
+            $('.popup-zapis').fadeIn(300);
+        });
+        $(".popup-zapis__close").click(function () {
+            $('body').removeClass('locked');
+            $(this).closest('.popup-zapis').fadeOut(300);
+        });
+    }
+    PopupInit();
+
+    function GalerySlider(){
+        if ($(".interest").length){
+            const largeSlider = ()=>{
+                let largeSliders = document.querySelectorAll('.interest__gallery.swiper-container ')
+                largeSliders.forEach((slider, index)=>{
+                    // this bit checks if there's more than 1 slide, if there's only 1 it won't loop
+                    let sliderLength = slider.children[0].children.length
+                    let result = (sliderLength > 1) ? true : false
+                    const swiper = new Swiper(slider, {
+                        slidesPerView: 'auto',
+                        observeParents: true,
+                        preloadImages: true,
+                        observer: true,
+                        spaceBetween: 8,
+                        loop: false,
+                        speed: 300,
+                    });
+                })
+            }
+            largeSlider();
+        }
+    }
+    GalerySlider();
+
+    function ModalInit() {
+        $(".has-video").click(function () {
+            let $FileLink = $(this).data('video');
+            $('.video-modal video source').attr('src', $FileLink);
+            $(".video-modal video")[0].load();
+            $('.video-modal').fadeIn(300);
+        });
+        $(".video-modal__close").click(function () {
+            $('body').removeClass('locked');
+            $('.video-modal video').get(0).pause();
+            $(this).closest('.video-modal').fadeOut(300);
+            $('.video-modal video source').attr('src', '');
+        });
+    }
+    ModalInit();
+
+    function GalleryClick(){
+        if($('.interest__gallery').length){
+            $(".interest__item-btn").click(function() {
+                $(this).closest('.interest__item').find('.interest__gallery').fadeToggle(300);
+                $(this).closest('.interest__item').find('.interest__item-btn').toggleClass('open');
+            });
+        }
+    }
+    GalleryClick();
+
 });
 

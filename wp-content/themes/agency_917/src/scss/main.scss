@@ -30,7 +30,7 @@ body{
   &.locked{
     height: 100vh;
     overflow: hidden;
-    @media all and (max-width: 500px){
+    @media all and (max-width: 568px){
       height: auto;
     }
     &:before{
@@ -61,6 +61,12 @@ body{
   padding-top: 165px;
   @media all and (max-width: 1920px){
     padding-top: px(165);
+  }
+  @media all and (max-width: 1024px){
+    padding-top: px(100);
+  }
+  @media all and (max-width: 768px){
+    padding-top: px(78);
   }
 }
 img{
@@ -155,12 +161,36 @@ img{
   @media all and (max-width: 1920px){
     font-size: px(24);
   }
+  @media all and (max-width: 1024px){
+    font-size: px(20);
+  }
+  @media all and (max-width: 768px){
+    font-size: px(18);
+  }
+  @media all and (max-width: 568px){
+    font-size: px(16);
+  }
+  @media all and (max-width: 500px){
+    font-size: px(14);
+  }
   span{
     font-family: "HelveticaNeueRoman", sans-serif;
     font-size: 24px;
     transition: 0.3s ease-in-out;
     @media all and (max-width: 1920px){
       font-size: px(24);
+    }
+    @media all and (max-width: 1024px){
+      font-size: px(20);
+    }
+    @media all and (max-width: 768px){
+      font-size: px(18);
+    }
+    @media all and (max-width: 568px){
+      font-size: px(16);
+    }
+    @media all and (max-width: 500px){
+      font-size: px(14);
     }
   }
 }
@@ -253,12 +283,23 @@ p{
   font-style: normal;
   font-weight: 200;
   font-size: 80px;
-  line-height: 100px;
+  line-height: 125%;
   color: #000000;
   text-align: left;
   @media all and (max-width: 1920px){
     font-size: px(80);
-    line-height: px(100);
+  }
+  @media all and (max-width: 1024px){
+    font-size: px(52);
+  }
+  @media all and (max-width: 768px){
+    font-size: px(40);
+  }
+  @media all and (max-width: 568px){
+    font-size: px(32);
+  }
+  @media all and (max-width: 500px){
+    font-size: px(26);
   }
   strong{
     font-family: "BeVietnam-BoldItalic", sans-serif;
@@ -268,7 +309,7 @@ p{
 
 
 @import "templates/preloader";
-@import "templates/404";
+//@import "templates/404";
 @import "templates/header";
 @import "templates/banner";
 @import "templates/two-lines";
@@ -282,5 +323,9 @@ p{
 @import "templates/sbanner";
 @import "templates/full";
 @import "templates/tvideo";
+@import "templates/popup";
+@import "templates/types";
+@import "templates/interest";
+@import "templates/video-modal";
 @import "templates/footer";
 

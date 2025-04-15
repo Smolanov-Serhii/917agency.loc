@@ -1,5 +1,6 @@
 <?php
-$post_id = get_the_ID();
+//$post_id = get_the_ID();
+$post_id = 13;
 ?>
 <section class="tvideo">
     <div class="tvideo__container" data-aos="fade-up" data-aos-delay="100">

@@ -24,7 +24,7 @@ if ($post_id != 17){
             <div class="footer__main">
                 <a href="tel:+19176248075" data-aos="fade-up" data-aos-delay="300">+1 917 624 8075</a>
                 <a href="mailto:INFO@917AGENCY.COM" data-aos="fade-up" data-aos-delay="500">INFO@917AGENCY.COM</a>
-                <div class="footer__btn button button-black" data-aos="fade-up" data-aos-delay="700">
+                <div class="footer__btn button button-black js-popup" data-aos="fade-up" data-aos-delay="700">
                     <span>Сontact</span>
                 </div>
             </div>

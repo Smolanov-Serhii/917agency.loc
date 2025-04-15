@@ -57,6 +57,9 @@
             width: px(105);
             margin-right: px(40);
         }
+        @media all and (max-width: 568px){
+            width: px(70);
+        }
         img{
             width: 100%;
             height: auto;
@@ -179,6 +182,60 @@
                             font-size: px(26);
                         }
                     }
+                }
+            }
+        }
+    }
+    &__popup{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        &-container{
+            box-shadow: 0px 0px 41.6px 0px rgba(0, 0, 0, 0.25);
+            background-color: #F4F2ED;
+            display: flex;
+            flex-direction: column;
+            padding: 58px 34px;
+            max-width: 731px;
+            width: calc(100% - px(20));
+            align-items: center;
+            @media all and (max-width: 1920px){
+                padding: px(58) px(34);
+            }
+            @media all and (max-width: 1024px){
+                padding: px(40) px(20);
+            }
+            @media all and (max-width: 500px){
+                padding: px(30) px(20);
+            }
+            p{
+                font-size: 36px;
+                margin-bottom: 51px;
+                text-align: center;
+                font-family: "HelveticaNeueLight", sans-serif;
+                color: #000000;
+                @media all and (max-width: 1920px){
+                    font-size: px(36);
+                    margin-bottom: px(51);
+                }
+                @media all and (max-width: 1024px){
+                    font-size: px(30);
+                    margin-bottom: px(40);
+                }
+                @media all and (max-width: 768px){
+                    font-size: px(24);
+                    margin-bottom: px(30);
+                }
+                @media all and (max-width: 500px){
+                    font-size: px(20);
+                    margin-bottom: px(20);
                 }
             }
         }

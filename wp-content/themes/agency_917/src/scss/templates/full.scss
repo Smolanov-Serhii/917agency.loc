@@ -3,6 +3,9 @@
   @media all and (max-width: 1920px){
     margin: px(82) 0;
   }
+  @media all and (max-width: 768px){
+    margin: 0;
+  }
   &__container{
 
   }
@@ -10,6 +13,12 @@
     margin-bottom: 60px;
     @media all and (max-width: 1920px){
       margin-bottom: px(60);
+    }
+    @media all and (max-width: 768px){
+      margin-bottom: px(24);
+      br{
+        display: none;
+      }
     }
   }
   &__text{
@@ -21,6 +30,15 @@
       text-transform: uppercase;
       @media all and (max-width: 1920px){
         font-size: px(32);
+      }
+      @media all and (max-width: 1024px){
+        font-size: px(24);
+      }
+      @media all and (max-width: 768px){
+        font-size: px(20);
+      }
+      @media all and (max-width: 568px){
+        font-size: px(18);
       }
     }
     p, li{
@@ -34,6 +52,15 @@
       strong{
         font-family: "HelveticaNeueBoldItalic", sans-serif;
       }
+      @media all and (max-width: 1024px){
+        font-size: px(22);
+      }
+      @media all and (max-width: 768px){
+        font-size: px(18);
+      }
+      @media all and (max-width: 568px){
+        font-size: px(16);
+      }
     }
     ul{
       padding-left: 40px;
@@ -41,6 +68,15 @@
       @media all and (max-width: 1920px){
         padding-left: px(40);
         margin-bottom: px(40);
+      }
+      @media all and (max-width: 1024px){
+        padding-left: px(22);
+      }
+      @media all and (max-width: 768px){
+        padding-left: px(18);
+      }
+      @media all and (max-width: 568px){
+        padding-left: px(16);
       }
       li{
         list-style: disc;
@@ -51,10 +87,17 @@
   &__row{
     display: flex;
     justify-content: space-between;
+    @media all and (max-width: 768px){
+      flex-direction: column;
+    }
+
     &:nth-child(1){
       margin-bottom: 30px;
       @media all and (max-width: 1920px){
         margin-bottom: px(30);
+      }
+      @media all and (max-width: 768px){
+        margin-bottom: px(20);
       }
       .full{
         &__text{
@@ -62,11 +105,17 @@
           @media all and (max-width: 1920px){
             width: calc(30% - px(15));
           }
+          @media all and (max-width: 768px){
+            width: 100%;
+          }
         }
         &__image{
           width: calc(70% - 15px);
           @media all and (max-width: 1920px){
             width: calc(70% - px(15));
+          }
+          @media all and (max-width: 768px){
+            width: 100%;
           }
         }
       }
@@ -78,6 +127,10 @@
           @media all and (max-width: 1920px){
             width: calc(40% - px(10));
           }
+          @media all and (max-width: 768px){
+            width: 100%;
+            padding-top: px(24);
+          }
         }
         &__image{
           width: calc(60% - 10px);
@@ -86,11 +139,17 @@
           @media all and (max-width: 1920px){
             width: calc(60% - px(10));
           }
+          @media all and (max-width: 768px){
+            width: 100%;
+          }
         }
         &__img{
           width: calc(50% - 15px);
           @media all and (max-width: 1920px){
             width: calc(50% - px(15));
+          }
+          @media all and (max-width: 768px){
+            width: calc(50% - px(10));
           }
           img{
             object-fit: cover;

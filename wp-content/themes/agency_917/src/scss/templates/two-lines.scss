@@ -3,6 +3,12 @@
   @media all and (max-width: 1920px){
     padding: px(108) 0 px(43) 0;
   }
+  @media all and (max-width: 768px){
+    padding: px(42) 0;
+  }
+  @media all and (max-width: 568px){
+    padding: px(42) 0 0 0;
+  }
   &__desc{
     font-family: "HelveticaNeueLight", sans-serif;
     font-size: 24px;
@@ -14,6 +20,28 @@
     @media all and (max-width: 1920px){
       font-size: px(24);
       margin-left: px(20);
+    }
+    @media all and (max-width: 1024px){
+      font-size: px(20);
+    }
+    @media all and (max-width: 768px){
+      font-size: px(18);
+      margin-left: 0;
+      br{
+        display: none;
+      }
+    }
+    @media all and (max-width: 568px){
+      font-size: px(14);
+    }
+  }
+  &__title{
+    @media all and (max-width: 768px){
+      display: block;
+      margin-bottom: px(14);
+    }
+    @media all and (max-width: 568px){
+
     }
   }
 }

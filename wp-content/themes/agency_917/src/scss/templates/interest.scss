@@ -1,0 +1,116 @@
+.interest{
+  &__container{
+
+  }
+  &__list{
+
+  }
+  &__item{
+    padding-bottom: 92px;
+    margin-bottom: 92px;
+    border-bottom: 1px solid #000000;
+    @media all and (max-width: 1920px){
+      padding-bottom: px(92);
+      margin-bottom: px(92);
+    }
+    &-main{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &-img{
+      width: calc(50% - 24px);
+      @media all and (max-width: 1920px){
+        width: calc(50% - px(24));
+      }
+    }
+    &-content{
+      width: calc(50% - 24px);
+      @media all and (max-width: 1920px){
+        width: calc(50% - px(24));
+      }
+    }
+    &-desc{
+      margin-top: 28px;
+      @media all and (max-width: 1920px){
+        margin-top: px(28);
+      }
+    }
+    &-btn{
+      border: 1px solid #000000;
+      width: 100%;
+      &.open{
+        svg{
+          transform: rotate(180deg);
+        }
+      }
+      &:hover{
+        svg{
+          path{
+            stroke: #FFFFFF;
+          }
+        }
+      }
+      svg{
+        margin-left: 8px;
+        width: 19px;
+        height: auto;
+        path{
+          transition: 0.3s ease-in-out;
+        }
+        @media all and (max-width: 1920px){
+          margin-left: px(8);
+          width: px(19);
+        }
+      }
+    }
+  }
+  &__gallery{
+    margin-top: 28px;
+    @media all and (max-width: 1920px){
+      margin-top: px(28);
+    }
+    &-play{
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      top: calc(50% - 80px);
+      left: calc(50% - 80px);
+      @media all and (max-width: 1920px){
+        width: px(160);
+        height: px(160);
+        top: calc(50% - px(80));
+        left: calc(50% - px(80));
+      }
+      svg{
+        transition: 0.3s ease-in-out;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-item{
+      width: auto;
+      height: 889px;
+      max-height: 70vh;
+      overflow: hidden;
+      @media all and (max-width: 1920px){
+        height: px(889);
+      }
+      &.has-video{
+        position: relative;
+        cursor: pointer;
+        &:hover{
+          img, svg{
+            transform: scale(110%);
+          }
+        }
+      }
+      img{
+        object-fit: cover;
+        transition: 0.3s ease-in-out;
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.types{
+  margin: 64px 0;
+  @media all and (max-width: 1920px){
+    margin: px(64) 0;
+  }
+  &__title{
+    font-family: "BeVietnam-Light", sans-serif;
+    font-size: 24px;
+    margin-bottom: 28px;
+    text-transform: uppercase;
+    color: #000000;
+    line-height: 120%;
+    @media all and (max-width: 1920px){
+      font-size: px(24);
+      margin-bottom: px(28);
+    }
+  }
+  &__list{
+    gap: 12px;
+    flex-wrap: wrap;
+    display: flex;
+    @media all and (max-width: 1920px){
+      margin-right: px(-12);
+      gap: px(12);
+    }
+    &-item{
+      width: calc(20% - 12px);
+      padding: 25px;
+      border: 1px solid #000000;
+      color: #000000;
+      text-decoration: none;
+      transition: 0.3s ease-in-out;
+      font-size: 24px;
+      background-color: #FFFFFF;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "BeVietnam-Light", sans-serif;
+      text-transform: uppercase;
+      @media all and (max-width: 1920px){
+        width: calc(20% - px(12));
+        padding: px(25);
+        font-size: px(24);
+      }
+      &.current, &:hover{
+        background-color: #000000;
+        color: #FFFFFF;
+      }
+    }
+  }
+}

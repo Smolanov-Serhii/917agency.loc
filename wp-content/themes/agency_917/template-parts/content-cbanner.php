@@ -4,7 +4,7 @@ $post_id = get_the_ID();
 <section class="cbanner">
     <div class="cbanner__bg" data-aos="zoom-in">
         <div class="cbanner__video">
-            <video width="100%" height="100%" poster="<?php echo the_field('cover_image_cbaner', $post_id); ?>" autoplay
+            <video class="lazy" width="100%" height="100%" poster="<?php echo the_field('cover_image_cbaner', $post_id); ?>" autoplay
                    preload="metadata" loop muted playsinline>
                 <source src="<?php the_field('video_file_cbaner', $post_id); ?>" type="video/mp4">
                 Your browser does not support the video tag.

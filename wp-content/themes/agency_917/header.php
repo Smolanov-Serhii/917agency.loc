@@ -11,9 +11,66 @@ $post_id = get_the_ID();
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <?php wp_head(); ?>
 </head>
+<script>
+    window.onload = function () {
+        document.body.classList.add('loaded_hiding');
+        window.setTimeout(function () {
+            document.body.classList.add('loaded');
+            document.body.classList.remove('loaded_hiding');
+            if ($('.wpcf7-numbers-only').length > 0) {
+                var ele = document.querySelectorAll('.wpcf7-numbers-only')[0];
+                ele.onkeypress = function(e) {
+                    if (isNaN(this.value + "" + String.fromCharCode(e.charCode)))
+                        return false;
+                }
+                ele.onpaste = function(e) {
+                    e.preventDefault();
+                }
+            }
+        }, 500);
 
+    }
+</script>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<div class="preloader">
+    <div class="preloader__row">
+        <div class="preloader__item"></div>
+        <div class="preloader__item"></div>
+    </div>
+</div>
+<div class="header__popup" style="display: none;">
+    <div class="header__popup-container">
+        <p>SUCCESS</p>
+        <div class="header__popup-close">
+            <div class="button button-black">
+                <span>Message has been sanded</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="contact-form popup-zapis" style="display: none">
+    <div class="contact-form__form popup-zapis__container">
+        <div class="popup-zapis__close">
+            <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.5" y="0.5" width="44" height="44" fill="#FDFDFD" stroke="#EFEFEF"/>
+                <path d="M13 32L22.5 22.5M32 13L22.5 22.5M22.5 22.5L32 32L13 13" stroke="#A6A6A6" stroke-linecap="round"/>
+            </svg>
+        </div>
+        <?php echo do_shortcode( '[contact-form-7 id="e65f92f" title="Contact page form"]' );?>
+    </div>
+</div>
+<div class="video-modal" style="display: none;">
+    <div class="video-modal__container">
+        <div class="video-modal__close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect x="4.57538" y="3" width="24" height="3" rx="1.5" transform="rotate(45 4.57538 3)" fill="#B0C1ED"></rect> <rect x="2.4541" y="19.9705" width="24" height="3" rx="1.5" transform="rotate(-45 2.4541 19.9705)" fill="#B0C1ED"></rect> </svg>
+        </div>
+        <video preload="true" autoplay loop height="auto" width="100%">
+            <source src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
 <header class="header">
     <div class="header__container main-container">
         <div class="header__logo">

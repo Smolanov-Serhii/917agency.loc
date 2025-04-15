@@ -3,6 +3,9 @@
   @media all and (max-width: 1920px){
     margin: px(80) 0;
   }
+  @media all and (max-width: 568px){
+    margin: px(24) 0;
+  }
   &__list{
 
   }
@@ -10,6 +13,9 @@
     transition: 0.3s ease-in-out;
     &.active{
       .cases__item-bottom{
+        @media all and (max-width: 568px){
+          border-radius: 0;
+        }
         &:after{
           position: absolute;
           top: -3px;
@@ -18,14 +24,24 @@
           left: 0;
           content: "";
           background-color: #FFFFFF;
+          @media all and (max-width: 568px){
+            border-radius: 0;
+          }
         }
       }
       .cases__item-content{
         padding-bottom: 0;
+        opacity: 1;
+        pointer-events: auto;
       }
       margin-bottom: 55px;
       @media all and (max-width: 1920px){
         margin-bottom: px(55);
+      }
+    }
+    &-button{
+      @media all and (max-width: 568px){
+        width: 100%;
       }
     }
     &:not(.active){
@@ -34,10 +50,15 @@
       @media all and (max-width: 1920px){
         margin-bottom: px(-30);
       }
+      @media all and (max-width: 568px){
+        margin-bottom: px(-30);
+      }
       .cases__item-content{
         height: 0;
         padding-top: 0;
         padding-bottom: 0;
+        opacity: 0;
+        pointer-events: none;
       }
     }
     &-bottom{
@@ -47,6 +68,15 @@
       transform: translateY(-24px);
       @media all and (max-width: 1920px){
         margin-bottom: px(-32);
+        transform: translateY(px(-24));
+      }
+      @media all and (max-width: 1024px){
+        margin-bottom: px(-40);
+        transform: translateY(px(-10));
+      }
+      @media all and (max-width: 568px){
+        margin-bottom: px(-30);
+        transform: translateY(px(-26));
       }
       &:after{
         position: absolute;
@@ -56,6 +86,9 @@
         left: 0;
         content: "";
         background-color: #FFFFFF;
+        @media all and (max-width: 568px){
+          top: 1px;
+        }
       }
     }
     &-bottom, &-bottom:after{
@@ -65,6 +98,10 @@
       @media all and (max-width: 1920px){
         height: px(109);
         border-radius: px(24);
+      }
+      @media all and (max-width: 568px){
+        height: px(60);
+        border-radius: px(12);
       }
     }
     &-title{
@@ -77,11 +114,30 @@
       @media all and (max-width: 1920px){
         font-size: px(82);
       }
+      @media all and (max-width: 1200px){
+        font-size: px(60);
+      }
+      @media all and (max-width: 768px){
+        font-size: px(34);
+      }
+      @media all and (max-width: 568px){
+        font-size: px(22);
+        //text-decoration: underline;
+        display: flex;
+      }
       span{
         width: 140px;
         display: inline-block;
         @media all and (max-width: 1920px){
           width: px(140);
+        }
+        @media all and (max-width: 1024px){
+          width: px(60);
+        }
+        @media all and (max-width: 568px){
+          width: auto;
+          text-decoration: none;
+          display: none;
         }
       }
 
@@ -99,6 +155,18 @@
         padding-right: px(190);
         padding-bottom: px(120);
       }
+      @media all and (max-width: 768px){
+        padding-top: px(32);
+        padding-left: px(60);
+        padding-right: 0;
+        padding-bottom: px(40);
+      }
+      @media all and (max-width: 568px){
+        padding: 0;
+        margin-top: px(20);
+        position: relative;
+        z-index: 2;
+      }
     }
     &-text{
       margin-bottom: 48px;
@@ -106,11 +174,26 @@
         margin-bottom: px(48);
       }
     }
+    &-image{
+      @media all and (max-width: 568px){
+        height: px(412);
+        img{
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
     &-images{
       gap: 24px;
       display: flex;
       @media all and (max-width: 1920px){
         gap: px(24);
+      }
+      @media all and (max-width: 568px){
+        padding-bottom: px(20);
+        gap: px(14);
+        flex-direction: column;
       }
     }
     &-img{

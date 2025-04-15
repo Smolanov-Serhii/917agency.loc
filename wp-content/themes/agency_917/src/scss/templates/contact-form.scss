@@ -5,6 +5,10 @@
     margin-top: px(108);
     padding-bottom: px(63);
   }
+  @media all and (max-width: 500px){
+    padding-bottom: px(40);
+    margin-top: px(40);
+  }
   &__container{
     display: flex;
     gap: 60px;
@@ -12,9 +16,16 @@
     @media all and (max-width: 1920px){
       gap: px(60);
     }
+    @media all and (max-width: 768px){
+      gap: px(24);
+      flex-direction: column;
+    }
   }
   &__img{
     width: 40%;
+    @media all and (max-width: 768px){
+      width: 100%;
+    }
   }
   &__title{
     margin-bottom: 40px;
@@ -28,6 +39,10 @@
     @media all and (max-width: 1920px){
       width: calc(60% - px(60));
     }
+    @media all and (max-width: 768px){
+      width: 100%;
+    }
+
     label{
       font-family: "HelveticaNeueLight", sans-serif;
       font-size: 24px;
@@ -35,9 +50,29 @@
       @media all and (max-width: 1920px){
         font-size: px(24);
       }
+      @media all and (max-width: 1024px){
+        font-size: px(22);
+      }
+      @media all and (max-width: 768px){
+        font-size: px(18);
+        margin-bottom: px(40);
+      }
+      @media all and (max-width: 568px){
+        font-size: px(16);
+      }
+      @media all and (max-width: 500px){
+        font-size: px(14);
+      }
       > span{
         display: inline-block;
+
       }
+      .wpcf7-form-control-wrap{
+        @media all and (max-width: 768px){
+          width: 100%;
+        }
+      }
+
       span{
         color: #D8D8D8;
         text-transform: lowercase;
@@ -53,6 +88,18 @@
         font-size: px(24);
         padding: px(10) 0;
       }
+      @media all and (max-width: 1024px){
+        font-size: px(22);
+      }
+      @media all and (max-width: 768px){
+        font-size: px(18);
+      }
+      @media all and (max-width: 568px){
+        font-size: px(16);
+      }
+      @media all and (max-width: 500px){
+        font-size: px(14);
+      }
     }
     textarea{
       height: 103px;
@@ -65,9 +112,10 @@
   .row-full{
     label{
       width: 100%;
-      > span, textarea{
+      > .wpcf7-form-control-wrap, textarea{
         width: 100%;
       }
+
     }
   }
   .row{
@@ -75,16 +123,30 @@
     @media all and (max-width: 1920px){
       margin-bottom: px(48);
     }
+    @media all and (max-width: 768px){
+      margin-bottom: 0;
+    }
     p{
       display: flex;
       justify-content: space-between;
       margin-bottom: 0;
+      @media all and (max-width: 768px){
+        flex-wrap: wrap;
+      }
       label{
         width: calc(50% - 24px);
         @media all and (max-width: 1920px){
           width: calc(50% - px(24));
         }
+        @media all and (max-width: 768px){
+          width: 100%;
+        }
       }
+    }
+  }
+  .wpcf7-submit{
+    @media all and (max-width: 568px){
+      width: 100%;
     }
   }
 }

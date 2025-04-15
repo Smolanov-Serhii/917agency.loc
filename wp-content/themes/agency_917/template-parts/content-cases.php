@@ -21,7 +21,7 @@ $post_id = get_the_ID();
                     <div class="cases__item-content">
                         <div class="cases__item-text full__text">
                             <?php echo $content;?>
-                            <div class="cases__item-button button button-black">
+                            <div class="cases__item-button button button-black js-popup">
                                 <span>CONTACT</span>
                             </div>
                         </div>

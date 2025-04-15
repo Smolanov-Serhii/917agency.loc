@@ -9,13 +9,23 @@
     min-height: calc(100vh - px(165));
     padding-bottom: px(95);
   }
+  @media all and (max-width: 1024px){
+    min-height: calc(100vh - px(100));
+  }
+  @media all and (max-width: 768px){
+    min-height: calc(100vh - px(78));
+  }
+  @media all and (max-width: 568px){
+    font-size: px(38);
+    padding-bottom: px(50);
+  }
   &__bg{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    img{
+    img, video{
       object-fit: cover;
       width: 100%;
       height: 100%;
@@ -41,20 +51,30 @@
       margin-bottom: px(70);
       font-size: px(24);
     }
+    @media all and (max-width: 768px){
+      font-size: px(20);
+    }
   }
   &__title, &__subtitle{
     font-family: "BeVietnam-Bold", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 160px;
-    line-height: 130px;
+    line-height: 100%;
     text-align: center;
     color: #FFFFFF;
     text-transform: uppercase;
     @media all and (max-width: 1920px){
       font-size: px(160);
-      line-height: px(130);
-
+    }
+    @media all and (max-width: 1024px){
+      font-size: px(120);
+    }
+    @media all and (max-width: 768px){
+      font-size: px(80);
+    }
+    @media all and (max-width: 568px){
+      font-size: px(38);
     }
   }
   &__subtitle{

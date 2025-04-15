@@ -3,6 +3,9 @@
   @media all and (max-width: 1920px){
     margin-bottom: px(82);
   }
+  @media all and (max-width: 768px){
+    margin-bottom: px(40);
+  }
   &__container{
     position: relative;
     display: flex;
@@ -13,6 +16,18 @@
     @media all and (max-width: 1920px){
       min-height: px(916);
       padding-bottom: px(130);
+    }
+    @media all and (max-width: 768px){
+      min-height: px(454);
+      padding-left: 0;
+      padding-right: 0;
+      align-items: center;
+      padding-bottom: 0;
+      justify-content: center;
+    }
+    img{
+      width: 100%;
+      height: auto;
     }
   }
   &__bg{
@@ -29,6 +44,7 @@
   }
   &__text{
     margin: 0;
+    position: relative;
     h2, p{
       color: #FFFFFF;
     }

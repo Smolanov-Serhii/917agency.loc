@@ -13,20 +13,22 @@ $post_id = get_the_ID();
             <?php
         }
         ?>
-        <?php
-        if (get_field('vodeo_file_video_block', $post_id)) {
-            ?>
-            <video width="100%" height="100%" poster="<?php echo the_field('image_for_video', $post_id); ?>" autoplay
-                   preload="metadata" loop muted playsinline>
-                <source src="<?php the_field('vodeo_file_video_block', $post_id); ?>" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+        <div class="video__video">
             <?php
-        } else {
+            if (get_field('vodeo_file_video_block', $post_id)) {
+                ?>
+                <video class="lazy" width="100%" height="100%" poster="<?php echo the_field('image_for_video', $post_id); ?>" autoplay
+                       preload="metadata" loop muted playsinline>
+                    <source src="<?php the_field('vodeo_file_video_block', $post_id); ?>" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <?php
+            } else {
+                ?>
+                <img src="<?php echo get_field('image_for_video', $post_id) ?>" alt="">
+                <?php
+            }
             ?>
-            <img src="<?php echo get_field('image_for_video', $post_id) ?>" alt="">
-            <?php
-        }
-        ?>
+        </div>
     </div>
 </section>

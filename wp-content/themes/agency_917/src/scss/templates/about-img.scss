@@ -8,6 +8,12 @@
     margin-top: px(46);
     max-height: calc(100vh - px(165));
   }
+  @media all and (max-width: 1024px){
+    max-height: none;
+    margin-top: 0;
+    height: auto;
+    margin-bottom: px(40);
+  }
   &__container{
     display: flex;
     justify-content: space-between;
@@ -15,6 +21,9 @@
     > div{
       height: 100%;
       overflow: hidden;
+      @media all and (max-width: 1024px){
+        height: auto;
+      }
       img{
         width: 100%;
         height: 100%;
@@ -28,8 +37,22 @@
     @media all and (max-width: 1920px){
       width: calc(70% - px(10));
     }
+    @media all and (max-width: 1024px){
+      img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
   &__second{
     width: 30%;
+    @media all and (max-width: 1024px){
+      img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 }

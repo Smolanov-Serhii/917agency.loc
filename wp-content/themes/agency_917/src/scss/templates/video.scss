@@ -3,17 +3,36 @@
   @media all and (max-width: 1920px){
     margin-bottom: px(82);
   }
+  @media all and (max-width: 768px){
+    margin-bottom: px(40);
+  }
   &__container{
     min-height: 454px;
     @media all and (max-width: 1920px){
       min-height: px(454);
     }
+    @media all and (max-width: 768px){
+      padding-left: 0;
+      padding-right: 0;
+      position: relative;
+    }
     img{
       width: 100%;
       height: auto;
     }
-    video{
-
+  }
+  &__video{
+    @media all and (max-width: 768px){
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    img, video{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
     }
   }
 }
