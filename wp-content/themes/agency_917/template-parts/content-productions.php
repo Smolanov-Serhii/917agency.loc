@@ -21,7 +21,7 @@ $post_id = get_the_ID();
                         ?>
                             <a href="<?php echo $lnk;?>" class="productions__item <?php if ( wp_is_mobile() ) { echo 'swiper-slide'; };?>" data-aos="fade-up" data-aos-delay="<?php echo $counter * 150; ?>">
                                 <div class="productions__item-img">
-                                    <img src="<?php echo $image;?>" alt="<?php echo $title;?>">
+                                    <img src="<?php echo $image;?>" alt="">
                                 </div>
                                 <div class="productions__item-title">
                                     <?php echo $title;?>
@@ -32,7 +32,7 @@ $post_id = get_the_ID();
                         ?>
                             <div class="productions__item <?php if ( wp_is_mobile() ) { echo 'swiper-slide'; };?>" data-aos="fade-up" data-aos-delay="<?php echo $counter * 150; ?>">
                                 <div class="productions__item-img">
-                                    <img src="<?php echo $image;?>" alt="<?php echo $title;?>">
+                                    <img src="<?php echo $image;?>" alt="">
                                 </div>
                                 <div class="productions__item-title">
                                     <?php echo $title;?>
