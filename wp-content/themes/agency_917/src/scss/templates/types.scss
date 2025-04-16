@@ -42,6 +42,20 @@
         padding: px(25);
         font-size: px(24);
       }
+      @media all and (max-width: 1024px){
+        width: calc(25% - px(12));
+        font-size: px(22);
+      }
+      @media all and (max-width: 768px){
+        width: calc(33.333% - px(12));
+        padding: px(20);
+        font-size: px(18);
+      }
+      @media all and (max-width: 500px){
+        width: auto;
+        padding: px(10);
+        font-size: px(14);
+      }
       &.current, &:hover{
         background-color: #000000;
         color: #FFFFFF;

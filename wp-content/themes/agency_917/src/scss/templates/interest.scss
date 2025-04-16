@@ -13,6 +13,14 @@
       padding-bottom: px(92);
       margin-bottom: px(92);
     }
+    @media all and (max-width: 768px){
+      padding-bottom: px(60);
+      margin-bottom: px(60);
+    }
+    @media all and (max-width: 568px){
+      padding-bottom: px(40);
+      margin-bottom: px(40);
+    }
     &-main{
       display: flex;
       flex-wrap: wrap;
@@ -24,6 +32,10 @@
       @media all and (max-width: 1920px){
         width: calc(50% - px(24));
       }
+      @media all and (max-width: 768px){
+        width: 100%;
+        margin-bottom: px(28);
+      }
       img{
         object-fit: cover;
         width: 100%;
@@ -34,6 +46,9 @@
       width: calc(50% - 24px);
       @media all and (max-width: 1920px){
         width: calc(50% - px(24));
+      }
+      @media all and (max-width: 768px){
+        width: 100%;
       }
     }
     &-desc{
@@ -84,11 +99,19 @@
       @media all and (max-width: 1920px){
         height: px(889);
       }
+      @media all and (max-width: 768px){
+        max-width: calc(100vw - px(68));
+        height: px(400);
+      }
+      @media all and (max-width: 480px){
+        max-width: calc(100vw - px(50));
+        height: px(290);
+      }
       img{
         object-fit: cover;
         transition: 0.3s ease-in-out;
         height: 100%;
-        width: auto;
+        width: 100%;
       }
     }
   }
@@ -115,6 +138,18 @@
       height: px(160);
       top: calc(50% - px(80));
       left: calc(50% - px(80));
+    }
+    @media all and (max-width: 768px){
+      width: px(120);
+      height: px(120);
+      top: calc(50% - px(60));
+      left: calc(50% - px(60));
+    }
+    @media all and (max-width: 568px){
+      width: px(80);
+      height: px(80);
+      top: calc(50% - px(40));
+      left: calc(50% - px(40));
     }
     svg{
       transition: 0.3s ease-in-out;
