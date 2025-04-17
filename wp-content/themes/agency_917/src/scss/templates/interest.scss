@@ -93,8 +93,8 @@
     }
     &-item{
       width: auto;
-      height: 889px;
-      max-height: 70vh;
+      //height: 889px;
+      max-height: 60vh;
       overflow: hidden;
       @media all and (max-width: 1920px){
         height: px(889);
@@ -103,15 +103,17 @@
         max-width: calc(100vw - px(68));
         height: px(400);
       }
-      @media all and (max-width: 480px){
-        max-width: calc(100vw - px(50));
-        height: px(290);
+      @media all and (max-width: 560px){
+        //height: auto;
       }
       img{
         object-fit: cover;
         transition: 0.3s ease-in-out;
         height: 100%;
         width: 100%;
+        @media all and (max-width: 560px){
+          width: auto;
+        }
       }
     }
   }

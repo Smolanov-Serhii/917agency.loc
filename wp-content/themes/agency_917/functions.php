@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	define( '_S_VERSION', '1.0.4' );
 }
 
 /**
@@ -29,7 +29,7 @@ function agency_setup() {
 	load_theme_textdomain( 'agency', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
+//	add_theme_support( 'automatic-feed-links' );
 
 	/*
 		* Let WordPress manage the document title.
@@ -60,9 +60,9 @@ function agency_setup() {
 	add_theme_support(
 		'html5',
 		array(
-			'search-form',
-			'comment-form',
-			'comment-list',
+//			'search-form',
+//			'comment-form',
+//			'comment-list',
 			'gallery',
 			'caption',
 			'style',
@@ -71,19 +71,19 @@ function agency_setup() {
 	);
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support(
-		'custom-background',
-		apply_filters(
-			'agency_custom_background_args',
-			array(
-				'default-color' => 'ffffff',
-				'default-image' => '',
-			)
-		)
-	);
+//	add_theme_support(
+//		'custom-background',
+//		apply_filters(
+//			'agency_custom_background_args',
+//			array(
+//				'default-color' => 'ffffff',
+//				'default-image' => '',
+//			)
+//		)
+//	);
 
 	// Add theme support for selective refresh for widgets.
-	add_theme_support( 'customize-selective-refresh-widgets' );
+//	add_theme_support( 'customize-selective-refresh-widgets' );
 
 	/**
 	 * Add support for core custom logo.
@@ -146,7 +146,7 @@ add_action( 'wp_enqueue_scripts', 'agency_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-require get_template_directory() . '/inc/custom-header.php';
+//require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
@@ -156,17 +156,31 @@ require get_template_directory() . '/inc/template-tags.php';
 /**
  * Functions which enhance the theme by hooking into WordPress.
  */
-require get_template_directory() . '/inc/template-functions.php';
+//require get_template_directory() . '/inc/template-functions.php';
 
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+//require get_template_directory() . '/inc/customizer.php';
 
 /**
  * Load Jetpack compatibility file.
  */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
+//if ( defined( 'JETPACK__VERSION' ) ) {
+//	require get_template_directory() . '/inc/jetpack.php';
+//}
+
+function remove_jquery_migrate( $scripts ) {
+    if ( ! is_admin() && isset( $scripts->registered['jquery'] ) ) {
+        $script = $scripts->registered['jquery'];
+        if ( $script->deps ) {
+// Check whether the script has any dependencies
+
+            $script->deps = array_diff( $script->deps, array( 'jquery-migrate' ) );
+        }
+    }
 }
+add_action( 'wp_default_scripts', 'remove_jquery_migrate' );
+
+
 

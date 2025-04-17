@@ -14,7 +14,16 @@ get_header();
                 <div class="types__list">
                     <?php
                     $categories = get_terms( array( 'taxonomy' => 'cases' ) );
-                    foreach ($categories as $category){
+                    $term_query = new WP_Term_Query( array(
+                        'taxonomy' => 'cases',
+                        'orderby'                => 'term_order',
+                        'order'                  => 'ASC',
+                        'child_of'               => 0,
+                        'parent'                 => 0,
+                        'fields'                 => 'all',
+                        'hide_empty'             => true,
+                    ) );
+                    foreach ($term_query->terms as $category){
                         ?>
                         <a class="types__list-item <?php if ($category->term_id == get_queried_object()->term_id) { echo 'current' ; }?>" href='<?php echo get_term_link( $category ); ?>'><?php echo $category->name?></a>
                         <?php
@@ -121,7 +130,7 @@ get_header();
                 </div>
             </div>
         </section>
-        <?php get_template_part( 'template-parts/content', 'tvideo' ); ?>
+<!--        --><?php //get_template_part( 'template-parts/content', 'tvideo' ); ?>
     </main>
 
 <?php

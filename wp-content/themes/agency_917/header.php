@@ -31,6 +31,29 @@ $post_id = get_the_ID();
 
     }
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        function updateVideoSource() {
+            const video = document.getElementById("responsive-video");
+            const sources = video.querySelectorAll("source");
+            let selectedSource = null;
+
+            sources.forEach((source) => {
+                if (window.matchMedia(source.getAttribute("media")).matches) {
+                    selectedSource = source.getAttribute("data-src");
+                }
+            });
+            console.log(selectedSource)
+            if (selectedSource) {
+                video.src = selectedSource;
+                video.load(); // Перезагрузка видео
+            }
+        }
+
+        updateVideoSource();
+    });
+</script>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div class="preloader">

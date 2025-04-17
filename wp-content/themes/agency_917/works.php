@@ -6,7 +6,7 @@ get_header();
 
     <main class="main">
         <?php get_template_part( 'template-parts/content', 'pbanner' ); ?>
-        <?php get_template_part( 'template-parts/content', 'tvideo' ); ?>
+<!--        --><?php //get_template_part( 'template-parts/content', 'tvideo' ); ?>
     </main>
 
 <?php

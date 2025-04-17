@@ -1,8 +1,5 @@
 $(document).ready(function () {
 
-    // $('html, body').stop().animate({
-    //     scrollTop: $('#rev').offset().top - 200
-    // }, 0);
     AOS.init({
         // Global settings:
         disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -66,31 +63,32 @@ $(document).ready(function () {
         }
     })
 
+    function PopupInitJS(){
+        $(".js-popup").click(function () {
+            $('body').addClass('locked');
+            $('.popup-zapis').fadeIn(300);
+        });
+        $(".popup-zapis__close").click(function () {
+            $('body').removeClass('locked');
+            $(this).closest('.popup-zapis').fadeOut(300);
+        });
+    }
+    PopupInitJS();
+
+
     function PopupInit() {
         document.addEventListener('wpcf7mailsent', function (event) {
             $('.popup-zapis').fadeOut(300);
-            $('.call-back').fadeOut(300);
             $('#success-send').fadeIn(300);
-            // $('.wpcf7-response-output').empty();
+            $('.wpcf7-response-output').empty();
             setTimeout(function () {
                 $('#success-send').fadeOut(300);
                 $('body').removeClass('locked');
             }, 2000);
 
         }, false);
-        $(".js-form").click(function () {
-            // $('body').addClass('locked');
-            // $('.popup-zapis').fadeIn(300);
-            $('body').addClass('locked');
-            $('.call-back').fadeIn(300);
-        });
-        // $(".js-messenger").click(function () {
-        //     $('body').addClass('locked');
-        //     $('.call-back').fadeIn(300);
-        // });
         $(".popup-zapis__close").click(function () {
             $('body').removeClass('locked');
-            $('.call-back').fadeOut(300);
             $('.popup-zapis').fadeOut(300);
         });
 
@@ -162,18 +160,6 @@ $(document).ready(function () {
     if ($('.productions').length) {
         ProductSlider();
     }
-
-    function PopupInit(){
-        $(".js-popup").click(function () {
-            $('body').addClass('locked');
-            $('.popup-zapis').fadeIn(300);
-        });
-        $(".popup-zapis__close").click(function () {
-            $('body').removeClass('locked');
-            $(this).closest('.popup-zapis').fadeOut(300);
-        });
-    }
-    PopupInit();
 
     function GalerySlider(){
         if ($(".interest").length){
